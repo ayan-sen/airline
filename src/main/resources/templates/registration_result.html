@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'First Name: ' + ${registration.firstName}" />
+    <p th:text="'Last Name: ' + ${registration.lastName}" />
+    <p th:text="'Mobile Number: ' + ${registration.mobileNumber}" />
+    <p th:text="'Gender: ' + ${registration.gender}" />
+    <p th:text="'User: ' + ${registration.user}" />
+    <a href="/login">Submit another message</a>
+</body>
+</html>
