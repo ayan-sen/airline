@@ -15,7 +15,7 @@ public class AirlineInfo implements Serializable {
 
 	@Id
 	@Column(name="airline_id")
-	private Integer airlineId;
+	private Long airlineId;
 	
 	@Column(name="airline_logo")
 	private String airlineLogo;
@@ -27,11 +27,11 @@ public class AirlineInfo implements Serializable {
 		
 	}
 
-	public Integer getAirlineId() {
+	public Long getAirlineId() {
 		return airlineId;
 	}
 
-	public void setAirlineId(Integer airlineId) {
+	public void setAirlineId(Long airlineId) {
 		this.airlineId = airlineId;
 	}
 

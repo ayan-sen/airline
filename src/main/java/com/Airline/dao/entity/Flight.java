@@ -19,7 +19,7 @@ public class Flight implements Serializable{
 
 	@Id
 	@Column(name="id")
-	private Integer id;
+	private Long id;
 	
 	@Column(name="destination")
 	private String destination;
@@ -40,7 +40,7 @@ public class Flight implements Serializable{
 	private String origin;
 	
 	@Column(name="inv_id")
-	private Integer invId;
+	private Long invId;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "flight_infoid")

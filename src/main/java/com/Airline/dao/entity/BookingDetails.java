@@ -12,28 +12,28 @@ public class BookingDetails {
 
 	@Id
 	@Column(name="booking_id")
-	private Integer bookingId;
+	private Long bookingId;
 	
 	@Column(name="passenger_id")
-	private Integer passengerId;
+	private Long passengerId;
 	
 	public BookingDetails() {
 		
 	}
 
-	public Integer getBookingId() {
+	public Long getBookingId() {
 		return bookingId;
 	}
 
-	public void setBookingId(Integer bookingId) {
+	public void setBookingId(Long bookingId) {
 		this.bookingId = bookingId;
 	}
 
-	public Integer getPassengerId() {
+	public Long getPassengerId() {
 		return passengerId;
 	}
 
-	public void setPassengerId(Integer passengerId) {
+	public void setPassengerId(Long passengerId) {
 		this.passengerId = passengerId;
 	}
 	

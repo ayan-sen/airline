@@ -11,7 +11,7 @@ public class Fare {
 
 	@Id
 	@Column(name="fare_id")
-	private Integer fareId;
+	private Long fareId;
 	
 	@Column(name="currency")
 	private String currency;
@@ -23,11 +23,11 @@ public class Fare {
 		
 	}
 
-	public Integer getFareId() {
+	public Long getFareId() {
 		return fareId;
 	}
 
-	public void setFareId(Integer fareId) {
+	public void setFareId(Long fareId) {
 		this.fareId = fareId;
 	}
 

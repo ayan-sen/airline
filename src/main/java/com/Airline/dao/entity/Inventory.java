@@ -11,7 +11,7 @@ public class Inventory {
 
 	@Id
 	@Column(name="inv_id")
-	private Integer invId;
+	private Long invId;
 	
 	@Column(name="count")
 	private Integer count;
@@ -20,11 +20,11 @@ public class Inventory {
 		
 	}
 
-	public Integer getInvId() {
+	public Long getInvId() {
 		return invId;
 	}
 
-	public void setInvId(Integer invId) {
+	public void setInvId(Long invId) {
 		this.invId = invId;
 	}
 

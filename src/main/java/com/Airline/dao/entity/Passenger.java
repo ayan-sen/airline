@@ -11,7 +11,7 @@ public class Passenger {
 
 	@Id
 	@Column(name="passenger_id")
-	private Integer passengerId;
+	private Long passengerId;
 	
 	@Column(name="email_address")
 	private String emailAddress;
@@ -26,20 +26,20 @@ public class Passenger {
 	private String lastName;
 	
 	@Column(name="mobile_number")
-	private Integer mobileNumber;
+	private Long mobileNumber;
 	
 	@Column(name="booking_id")
-	private Integer bookingId;
+	private Long bookingId;
 	
 	public Passenger() {
 		
 	}
 
-	public Integer getPassengerId() {
+	public Long getPassengerId() {
 		return passengerId;
 	}
 
-	public void setPassengerId(Integer passengerId) {
+	public void setPassengerId(Long passengerId) {
 		this.passengerId = passengerId;
 	}
 
@@ -75,19 +75,19 @@ public class Passenger {
 		this.lastName = lastName;
 	}
 
-	public Integer getMobileNumber() {
+	public Long getMobileNumber() {
 		return mobileNumber;
 	}
 
-	public void setMobileNumber(Integer mobileNumber) {
+	public void setMobileNumber(Long mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 
-	public Integer getBookingId() {
+	public Long getBookingId() {
 		return bookingId;
 	}
 
-	public void setBookingId(Integer bookingId) {
+	public void setBookingId(Long bookingId) {
 		this.bookingId = bookingId;
 	}
 	

@@ -15,7 +15,7 @@ public class FlightInfo implements Serializable{
 
 	@Id
 	@Column(name="flight_infoid")
-	private Integer flightInfoId;
+	private Long flightInfoId;
 	
 	@Column(name="flight_number")
 	private String flightNumber;
@@ -30,10 +30,10 @@ public class FlightInfo implements Serializable{
 		
 	}
 	
-	public Integer getFlightInfoId() {
+	public Long getFlightInfoId() {
 		return flightInfoId;
 	}
-	public void setFlightInfoId(Integer flightInfoId) {
+	public void setFlightInfoId(Long flightInfoId) {
 		this.flightInfoId = flightInfoId;
 	}
 	public String getFlightNumber() {
