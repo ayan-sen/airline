@@ -13,8 +13,8 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="passenger_id")
-	private Long passengerId;
+	@Column(name="user_id")
+	private Long userId;
 	
 	@Column(name="first_name")
 	private String firstName;
@@ -26,10 +26,10 @@ public class User {
 	private String gender;
 	
 	@Column(name="email_address")
-	private String email;
+	private String emailAddress;
 	
 	@Column(name="mobile_number")
-	private Long mobile;
+	private Long mobileNumber;
 	
 	@Column(name="username")
 	private String username;
@@ -39,14 +39,6 @@ public class User {
 	
 	public User() {
 		
-	}
-
-	public Long getPassengerId() {
-		return passengerId;
-	}
-
-	public void setPassengerId(Long passengerId) {
-		this.passengerId = passengerId;
 	}
 
 	public String getFirstName() {
@@ -73,20 +65,20 @@ public class User {
 		this.gender = gender;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
-	public Long getMobile() {
-		return mobile;
+	public Long getMobileNumber() {
+		return mobileNumber;
 	}
 
-	public void setMobile(Long mobile) {
-		this.mobile = mobile;
+	public void setMobileNumber(Long mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 
 	public String getUsername() {
@@ -103,5 +95,13 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 }

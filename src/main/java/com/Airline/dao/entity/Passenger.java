@@ -2,6 +2,8 @@ package com.Airline.dao.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +12,7 @@ import javax.persistence.Table;
 public class Passenger {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="passenger_id")
 	private Long passengerId;
 	
@@ -91,4 +94,14 @@ public class Passenger {
 		this.bookingId = bookingId;
 	}
 	
+	public static Passenger create(User user) {
+		Passenger p = new Passenger();
+		p.setEmailAddress(user.getEmailAddress());
+		p.setFirstName(user.getFirstName());
+		p.setGender(user.getGender());
+		p.setLastName(user.getLastName());
+		p.setMobileNumber(user.getMobileNumber());
+		
+		return p;
+	}
 }
