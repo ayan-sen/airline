@@ -1,1 +1,18 @@
-<p>This is the flight search form!!!</p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Flight Search</title>
+</head>
+<body>
+	<div align="center">
+	<h1>Flight Search</h1>
+    <form action="#" th:action="@{/search-submit}" th:object="${search}" method="post">
+    	<p>Origin: <input type="text" th:field="*{origin}" /></p>
+        <p>Destination: <input type="text" th:field="*{destination}" /></p>
+        <p>Date: <input type="date" th:field="*{date}" /></p>
+        <p><input type="submit" value="Search" /> <input type="reset" value="Reset" /></p>
+    </form>
+    </div>
+</body>
+</html>

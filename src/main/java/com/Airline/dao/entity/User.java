@@ -26,10 +26,10 @@ public class User {
 	private String gender;
 	
 	@Column(name="email_address")
-	private String emailAddress;
+	private String email;
 	
 	@Column(name="mobile_number")
-	private Long mobileNumber;
+	private Long mobile;
 	
 	@Column(name="username")
 	private String username;
@@ -73,20 +73,20 @@ public class User {
 		this.gender = gender;
 	}
 
-	public String getEmailAddress() {
-		return emailAddress;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public Long getMobileNumber() {
-		return mobileNumber;
+	public Long getMobile() {
+		return mobile;
 	}
 
-	public void setMobileNumber(Long mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobile(Long mobile) {
+		this.mobile = mobile;
 	}
 
 	public String getUsername() {

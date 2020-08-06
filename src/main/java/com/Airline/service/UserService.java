@@ -16,7 +16,11 @@ public class UserService {
 		userRepository.save(user);
 	}
 	
-	public User getUser(Long id) {
+	public User getUserById(Long id) {
 		return userRepository.findById(id).get();
+	}
+	
+	public User getUserByUsernameAndPassword(String username, String password) {
+		return userRepository.findOneByUsernameAndPassword(username, password);
 	}
 }

@@ -1,5 +1,6 @@
 package com.Airline.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,9 @@ public class SearchService {
 	
 	public List<Flight> getAll(){
 		return searchRepository.findAll();
+	}
+	
+	public List<Flight> getFlights(String origin, String destination, LocalDate date){
+		return searchRepository.findByOriginAndDestinationAndFlightDate(origin, destination, date);
 	}
 }
