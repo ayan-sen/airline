@@ -17,9 +17,8 @@
 					<th>Flight Number</th>
 					<th>Flight Time</th>
 					<th>Origin</th>
-					<th>Fare Id</th>
-					<th>Flight Info Id</th>
-					<th>Inv Id</th>
+					<th>Fare</th>
+					<th>Booking</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -28,12 +27,11 @@
 					<td th:text="${flight.destination}">Destination</td>
 					<td th:text="${flight.duration}">Duration</td>
 					<td th:text="${flight.flightDate}">Flight Date</td>
-					<td th:text="${flight.flightNumber}">Flight Number</td>
+					<td th:text="${flight.flightNo}">Flight Number</td>
 					<td th:text="${flight.flightTime}">Flight Time</td>
 					<td th:text="${flight.origin}">Origin</td>
-					<td th:text="${flight.fareId}">Fare Id</td>
-					<td th:text="${flight.flightInfoId}">Flight Info Id</td>
-					<td th:text="${flight.invId}">Inv Id</td>
+					<td th:text="${flight.fare.fare}">Fare Id</td>
+					<td><a href="/book?flightId=${flight.id}" >Book</a></td>
 				</tr>
 			</tbody>
 		</table>

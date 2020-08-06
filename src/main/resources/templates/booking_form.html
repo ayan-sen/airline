@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Booking</title>
+</head>
+<body>
+	<div align="center">
+	<h1>Book Flight</h1>
+    <form action="#" th:action="@{/book-submit}" th:object="${book}" method="post">
+    	<p>First Name: <input type="text" th:field="*{firstName}" /></p>
+    	<p>Last Name: <input type="text" th:field="*{lastName}" /></p>
+    	<p>Gender: <input type="text" th:field="*{gender}" /></p>
+    	<p>Mobile Number: <input type="tel" th:field="*{mobile}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+    </div>
+</body>
+</html>
