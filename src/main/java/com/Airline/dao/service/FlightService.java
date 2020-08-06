@@ -38,7 +38,7 @@ public class FlightService {
 	private BookingDetailsRepository bookingDetailsRepository;
 	
 	@Transactional
-	public void bookFlight(List<Long> userIds, Integer flightId) {
+	public void bookFlight(List<Long> userIds, Long flightId) {
 		
 		List<User> users = userIds.stream().map(u -> userRepository.findById(u).get()).collect(Collectors.toList());
 		

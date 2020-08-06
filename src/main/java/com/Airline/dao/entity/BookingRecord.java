@@ -18,7 +18,7 @@ public class BookingRecord {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="booking_id")
-	private Integer bookingId;
+	private Long bookingId;
 	
 	@Column(name="booking_date")
 	private LocalDate bookingDate;
@@ -48,11 +48,11 @@ public class BookingRecord {
 		
 	}
 
-	public Integer getBookingId() {
+	public Long getBookingId() {
 		return bookingId;
 	}
 
-	public void setBookingId(Integer bookingId) {
+	public void setBookingId(Long bookingId) {
 		this.bookingId = bookingId;
 	}
 

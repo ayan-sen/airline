@@ -22,7 +22,7 @@ public class Flight implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-	private Integer id;
+	private Long id;
 	
 	@Column(name="destination")
 	private String destination;
@@ -43,7 +43,7 @@ public class Flight implements Serializable{
 	private String origin;
 	
 	@Column(name="inv_id")
-	private Integer invId;
+	private Long invId;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "flight_infoid")
@@ -60,11 +60,11 @@ public class Flight implements Serializable{
 				+ ", origin=" + origin + "]";
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -116,11 +116,11 @@ public class Flight implements Serializable{
 		this.origin = origin;
 	}
 
-	public Integer getInvId() {
+	public Long getInvId() {
 		return invId;
 	}
 
-	public void setInvId(Integer invId) {
+	public void setInvId(Long invId) {
 		this.invId = invId;
 	}
 

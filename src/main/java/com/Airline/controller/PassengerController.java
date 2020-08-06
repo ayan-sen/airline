@@ -17,10 +17,10 @@ public class PassengerController {
 		return "welcome";
 	}
 
-	@GetMapping("/search")
-	public String searchForm() {
-		return "flight_search";
-	}
+//	@GetMapping("/search")
+//	public String searchForm() {
+//		return "flight_search";
+//	}
 
 	@GetMapping("/login")
 	public String loginForm(Model model) {

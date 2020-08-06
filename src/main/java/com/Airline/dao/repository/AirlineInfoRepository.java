@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.Airline.dao.entity.AirlineInfo;
 
 @Repository
-public interface AirlineInfoRepository extends JpaRepository<AirlineInfo, Integer>{
+public interface AirlineInfoRepository extends JpaRepository<AirlineInfo, Long>{
 
 	
 }

@@ -14,7 +14,7 @@ public class Passenger {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="passenger_id")
-	private Integer passengerId;
+	private Long passengerId;
 	
 	@Column(name="email_address")
 	private String emailAddress;
@@ -32,17 +32,17 @@ public class Passenger {
 	private Long mobileNumber;
 	
 	@Column(name="booking_id")
-	private Integer bookingId;
+	private Long bookingId;
 	
 	public Passenger() {
 		
 	}
 
-	public Integer getPassengerId() {
+	public Long getPassengerId() {
 		return passengerId;
 	}
 
-	public void setPassengerId(Integer passengerId) {
+	public void setPassengerId(Long passengerId) {
 		this.passengerId = passengerId;
 	}
 
@@ -86,11 +86,11 @@ public class Passenger {
 		this.mobileNumber = mobileNumber;
 	}
 
-	public Integer getBookingId() {
+	public Long getBookingId() {
 		return bookingId;
 	}
 
-	public void setBookingId(Integer bookingId) {
+	public void setBookingId(Long bookingId) {
 		this.bookingId = bookingId;
 	}
 	
