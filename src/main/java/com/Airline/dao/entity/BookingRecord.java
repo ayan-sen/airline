@@ -1,10 +1,13 @@
 package com.Airline.dao.entity;
 
 import java.sql.Time;
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,11 +16,12 @@ import javax.persistence.Table;
 public class BookingRecord {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="booking_id")
 	private Integer bookingId;
 	
 	@Column(name="booking_date")
-	private Date bookingDate;
+	private LocalDate bookingDate;
 	
 	@Column(name="destination")
 	private String destination;
@@ -26,13 +30,13 @@ public class BookingRecord {
 	private Double fare;
 	
 	@Column(name="flight_date")
-	private Date flightDate;
+	private LocalDate flightDate;
 	
 	@Column(name="flight_number")
 	private String flightNumber;
 	
 	@Column(name="flight_time")
-	private Time flightTime;
+	private String flightTime;
 	
 	@Column(name="origin")
 	private String origin;
@@ -52,11 +56,11 @@ public class BookingRecord {
 		this.bookingId = bookingId;
 	}
 
-	public Date getBookingDate() {
+	public LocalDate getBookingDate() {
 		return bookingDate;
 	}
 
-	public void setBookingDate(Date bookingDate) {
+	public void setBookingDate(LocalDate bookingDate) {
 		this.bookingDate = bookingDate;
 	}
 
@@ -76,11 +80,11 @@ public class BookingRecord {
 		this.fare = fare;
 	}
 
-	public Date getFlightDate() {
+	public LocalDate getFlightDate() {
 		return flightDate;
 	}
 
-	public void setFlightDate(Date flightDate) {
+	public void setFlightDate(LocalDate flightDate) {
 		this.flightDate = flightDate;
 	}
 
@@ -92,11 +96,11 @@ public class BookingRecord {
 		this.flightNumber = flightNumber;
 	}
 
-	public Time getFlightTime() {
+	public String getFlightTime() {
 		return flightTime;
 	}
 
-	public void setFlightTime(Time flightTime) {
+	public void setFlightTime(String flightTime) {
 		this.flightTime = flightTime;
 	}
 
@@ -115,7 +119,19 @@ public class BookingRecord {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
+
+	public static BookingRecord createFromFlightData(Flight flight) {
+		BookingRecord b = new BookingRecord();
+		b.setBookingDate(LocalDate.now());
+		b.setDestination(flight.getDestination());
+		b.setFare(flight.getFare().getFare());
+		b.setFlightDate(flight.getFlightDate());
+		b.setFlightNumber(flight.getFlightNo());
+		b.setFlightTime(flight.getFlightTime());
+		b.setOrigin(flight.getOrigin());
+		b.setStatus("CONFIRMED");
+		return b;
+	}
 }
 
 

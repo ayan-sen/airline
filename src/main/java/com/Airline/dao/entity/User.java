@@ -13,8 +13,8 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="passenger_id")
-	private Long passengerId;
+	@Column(name="user_id")
+	private Long userId;
 	
 	@Column(name="first_name")
 	private String firstName;
@@ -39,14 +39,6 @@ public class User {
 	
 	public User() {
 		
-	}
-
-	public Long getPassengerId() {
-		return passengerId;
-	}
-
-	public void setPassengerId(Long passengerId) {
-		this.passengerId = passengerId;
 	}
 
 	public String getFirstName() {
@@ -103,5 +95,17 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+
+
+	public Long getUserId() {
+		return userId;
+	}
+
+
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 }

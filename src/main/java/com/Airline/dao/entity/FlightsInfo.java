@@ -16,13 +16,11 @@ public class FlightsInfo implements Serializable{
 
 	private static final long serialVersionUID = -6683618319726700134L;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "airline_id")
+	@Column(name = "airline_id")
 	private AirlineInfo airlineInfo;
 	
 	@Id
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "flight_infoid")
+	@Column(name = "flight_infoid")
 	private FlightInfo flightInfo;
 
 	@Override
